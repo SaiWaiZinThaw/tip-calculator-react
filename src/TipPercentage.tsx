@@ -2,7 +2,6 @@ import React, { useState, ChangeEvent } from "react";
 
 interface TipPercentageProps {
   onTipSelect: (percentage: number) => void;
-  setCustomTip: (value: string) => void;
   setTipPercentage: (percentage: number) => void;
 }
 
