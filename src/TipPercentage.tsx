@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, ChangeEvent } from "react";
 
 interface TipPercentageProps {
   onTipSelect: (percentage: number) => void;
