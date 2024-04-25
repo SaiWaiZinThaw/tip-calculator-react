@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState, ChangeEvent } from "react";
 import BillInput from "./BillInput";
 import TipPercentage from "./TipPercentage";
 
@@ -8,15 +8,15 @@ const App = () => {
   const [tipPercentage, setTipPercentage] = useState(0.15); // Default tip percentage
   const [customTip, setCustomTip] = useState(""); // State for custom tip input
 
-  const billInputHandler = (event) => {
+  const billInputHandler = (event: ChangeEvent<HTMLInputElement>) => {
     setBill(event.target.value);
   };
 
-  const pplInputHandler = (event) => {
+  const pplInputHandler = (event: ChangeEvent<HTMLInputElement>) => {
     setPpl(event.target.value);
   };
 
-  const tipPerBtnHandler = (per) => {
+  const tipPerBtnHandler = (per: number) => {
     const billAmount = parseFloat(bill);
     const peopleCount = parseInt(ppl);
 
@@ -51,7 +51,7 @@ const App = () => {
   };
 
   // Function to handle selecting predefined tip percentages
-  const onTipSelect = (percentage) => {
+  const onTipSelect = (percentage: number) => {
     setTipPercentage(percentage);
   };
 
@@ -68,7 +68,6 @@ const App = () => {
           <TipPercentage
             onTipSelect={onTipSelect}
             setCustomTip={setCustomTip}
-            customTip={customTip}
             setTipPercentage={setTipPercentage}
           />
           <div className="">
