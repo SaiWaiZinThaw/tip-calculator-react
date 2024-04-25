@@ -8,7 +8,7 @@ interface TipPercentageProps {
 
 const TipPercentage: React.FC<TipPercentageProps> = ({
   onTipSelect,
-  setCustomTip,
+
   setTipPercentage,
 }) => {
   const [customTipValue, setCustomTipValue] = useState("");
@@ -17,7 +17,6 @@ const TipPercentage: React.FC<TipPercentageProps> = ({
     const value = event.target.value;
     setCustomTipValue(value);
     // Update the custom tip value in the parent component
-    setCustomTip(value);
     // Update the tip percentage in the parent component
     setTipPercentage(parseFloat(value) / 100);
   };

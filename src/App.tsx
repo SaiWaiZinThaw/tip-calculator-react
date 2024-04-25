@@ -6,7 +6,6 @@ const App = () => {
   const [bill, setBill] = useState("");
   const [ppl, setPpl] = useState("");
   const [tipPercentage, setTipPercentage] = useState(0.15); // Default tip percentage
-  const [customTip, setCustomTip] = useState(""); // State for custom tip input
 
   const billInputHandler = (event: ChangeEvent<HTMLInputElement>) => {
     setBill(event.target.value);
@@ -67,7 +66,6 @@ const App = () => {
           <BillInput bill={bill} billInputHandler={billInputHandler} />
           <TipPercentage
             onTipSelect={onTipSelect}
-            setCustomTip={setCustomTip}
             setTipPercentage={setTipPercentage}
           />
           <div className="">

@@ -1,5 +1,3 @@
-import React from "react";
-
 const BillInput = (props: any) => {
   return (
     <div className="pb-12">
